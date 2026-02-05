@@ -96,7 +96,12 @@ export function TripleSlider({ slides }: { slides: Product[] }) {
             <Link href={crate.permalink}>
               <div>
                 {crate.images.length > 0 && (
-                  <Image src={crate.images[0].src} width={400} height={400} alt={crate.name} />
+                  <Image
+                    src={crate.images[0].src}
+                    width={400}
+                    height={400}
+                    alt={crate.name}
+                  />
                 )}
                 <p className="pt-2">{crate.name}</p>
               </div>

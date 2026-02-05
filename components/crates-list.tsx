@@ -75,7 +75,7 @@ export function CratesList({ products }: CratesProps) {
               {products
                 .slice(
                   page * PRODUCTS_PER_PAGE,
-                  page * PRODUCTS_PER_PAGE + PRODUCTS_PER_PAGE
+                  page * PRODUCTS_PER_PAGE + PRODUCTS_PER_PAGE,
                 )
                 .map((crate) => {
                   return (

@@ -23,7 +23,7 @@ export function HeroSection({
   const desktopImageRef = React.useRef<HTMLDivElement>();
 
   const handleImageLoad = (
-    event: React.SyntheticEvent<HTMLImageElement, Event>
+    event: React.SyntheticEvent<HTMLImageElement, Event>,
   ) => {
     setImageHeight(event.currentTarget.height);
   };

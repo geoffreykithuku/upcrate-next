@@ -27,7 +27,12 @@ export function WhyUpcrateSection() {
           <div className="md:flex align-center justify-center gap-20 md:text-xl relative z-10 max-w-6xl mx-auto mb-32 mt-10">
             <div>
               <Parallax className="mt-10" offset={-10}>
-                <Image src="/why-upcrate/1.png" width={414} height={331} alt="Why Upcrate" />
+                <Image
+                  src="/why-upcrate/1.png"
+                  width={414}
+                  height={331}
+                  alt="Why Upcrate"
+                />
               </Parallax>
               <p className="max-w-xs m-auto">
                 {t("sections.why_upcrate.steps.0.text")}
@@ -35,7 +40,12 @@ export function WhyUpcrateSection() {
             </div>
             <div>
               <Parallax className="mt-10" offset={-10}>
-                <Image src="/why-upcrate/2.png" width={414} height={331} alt="Why Upcrate" />
+                <Image
+                  src="/why-upcrate/2.png"
+                  width={414}
+                  height={331}
+                  alt="Why Upcrate"
+                />
               </Parallax>
               <p className="max-w-xs m-auto">
                 {t("sections.why_upcrate.steps.1.text")}
@@ -43,7 +53,12 @@ export function WhyUpcrateSection() {
             </div>
             <div>
               <Parallax className="mt-10" offset={-10}>
-                <Image src="/why-upcrate/3.png" width={388} height={311} alt="Why Upcrate" />
+                <Image
+                  src="/why-upcrate/3.png"
+                  width={388}
+                  height={311}
+                  alt="Why Upcrate"
+                />
               </Parallax>
               <p className="max-w-xs m-auto">
                 {t("sections.why_upcrate.steps.2.text")}

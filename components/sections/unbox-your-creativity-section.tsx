@@ -21,7 +21,12 @@ export function UnboxYourCreativitySection({
   return (
     <section className={`text-center p-10 sm:p-40 ${className}`}>
       <Parallax offset={40}>
-        <Image src="/unbox-your-creativity.svg" width={280} height={100} alt="Unbox Your Creativity" />
+        <Image
+          src="/unbox-your-creativity.svg"
+          width={280}
+          height={100}
+          alt="Unbox Your Creativity"
+        />
       </Parallax>
 
       <h3 className="text-xl md:text-4xl mx-auto text-center max-w-5xl mt-6 font-bold whitespace-pre-line">

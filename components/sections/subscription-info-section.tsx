@@ -18,28 +18,28 @@ export function SubscriptionInfoSection() {
             <li>
               <Link href={`/${lang}/faq`}>
                 {t(
-                  "sections.subscription_info.columns.help_contact.links.0.text"
+                  "sections.subscription_info.columns.help_contact.links.0.text",
                 )}
               </Link>
             </li>
             <li>
               <Link href={`/${lang}/faq`}>
                 {t(
-                  "sections.subscription_info.columns.help_contact.links.1.text"
+                  "sections.subscription_info.columns.help_contact.links.1.text",
                 )}
               </Link>
             </li>
             <li>
               <Link href={`/${lang}/newsletter`}>
                 {t(
-                  "sections.subscription_info.columns.help_contact.links.2.text"
+                  "sections.subscription_info.columns.help_contact.links.2.text",
                 )}
               </Link>
             </li>
             <li>
               <Link href={`/${lang}/contact`}>
                 {t(
-                  "sections.subscription_info.columns.help_contact.links.3.text"
+                  "sections.subscription_info.columns.help_contact.links.3.text",
                 )}
               </Link>
             </li>
@@ -64,7 +64,7 @@ export function SubscriptionInfoSection() {
           </h4>
           <h5 className="underline mt-3 text-2xl">
             {t(
-              "sections.subscription_info.columns.payment_methods.subscriptions"
+              "sections.subscription_info.columns.payment_methods.subscriptions",
             )}
           </h5>
           <div className="mt-3">

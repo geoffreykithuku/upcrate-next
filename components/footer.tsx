@@ -19,50 +19,42 @@ export function Footer(): JSX.Element {
           <ul className="list-reset leading-normal text-red text-xl">
             <li>
               <Link href="/imprint">
-                <a>
-                  <Trans
-                    i18nKey="common:navigation.imprint"
-                    components={{
-                      1: <br />,
-                    }}
-                  />
-                </a>
+                <Trans
+                  i18nKey="common:navigation.imprint"
+                  components={{
+                    1: <br />,
+                  }}
+                />
               </Link>
             </li>
             <li>
               <Link href="/privacy">
-                <a>
-                  <Trans
-                    i18nKey="common:navigation.privacy"
-                    components={{
-                      1: <br />,
-                    }}
-                  />
-                </a>
+                <Trans
+                  i18nKey="common:navigation.privacy"
+                  components={{
+                    1: <br />,
+                  }}
+                />
               </Link>
             </li>
             <li>
               <Link href="/terms-and-conditions">
-                <a>
-                  <Trans
-                    i18nKey="common:navigation.terms_and_conditions"
-                    components={{
-                      1: <br />,
-                    }}
-                  />
-                </a>
+                <Trans
+                  i18nKey="common:navigation.terms_and_conditions"
+                  components={{
+                    1: <br />,
+                  }}
+                />
               </Link>
             </li>
             <li>
               <Link href="/cancellation-policy">
-                <a>
-                  <Trans
-                    i18nKey="common:navigation.cancellation_policy"
-                    components={{
-                      1: <br />,
-                    }}
-                  />
-                </a>
+                <Trans
+                  i18nKey="common:navigation.cancellation_policy"
+                  components={{
+                    1: <br />,
+                  }}
+                />
               </Link>
             </li>
           </ul>
@@ -74,9 +66,7 @@ export function Footer(): JSX.Element {
             {t("navigation.info_headline")}
           </h4>
           <ul className="list-reset leading-normal text-blue text-xl">
-            <li>
-              
-            </li>
+            <li></li>
             <li>
               <Link href="/contact">{t("navigation.help_contact")}</Link>
             </li>
@@ -92,7 +82,7 @@ export function Footer(): JSX.Element {
           <img src="/pen.svg" width="100%" height="auto" alt="" />
         </div>
         <div className="md:col-span-2 flex flex-col justify-between">
-          <FooterNewsletterForm/>
+          <FooterNewsletterForm />
         </div>
       </div>
 

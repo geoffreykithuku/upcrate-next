@@ -15,7 +15,12 @@ export function TheBottlePostSection() {
         </h3>
 
         <div className="max-w-8xl mt-5 md:mt-10 mx-auto text-center">
-          <Image src="/the-bottle-post/big.jpg" width={1951} height={489} alt="The Bottle Post" />
+          <Image
+            src="/the-bottle-post/big.jpg"
+            width={1951}
+            height={489}
+            alt="The Bottle Post"
+          />
 
           <div className="w-full h-full">
             <div className="flex flex-col text-purple-dark h-full justify-items-end mt-5 md:mt-0 md:text-xl">

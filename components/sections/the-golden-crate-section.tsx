@@ -10,7 +10,7 @@ export function TheGoldenCrateSection() {
   const { width } = useWindowSize();
 
   const handleImageLoad = (
-    event: React.SyntheticEvent<HTMLImageElement, Event>
+    event: React.SyntheticEvent<HTMLImageElement, Event>,
   ) => {
     setHeight(event.currentTarget.height);
   };

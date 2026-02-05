@@ -46,7 +46,12 @@ export function AsFeaturedInSection() {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
-            <Image src="/as-featured-in/palette.png" width={222} height={103} alt="Palette" />
+            <Image
+              src="/as-featured-in/palette.png"
+              width={222}
+              height={103}
+              alt="Palette"
+            />
           </motion.a>
         </div>
       </div>

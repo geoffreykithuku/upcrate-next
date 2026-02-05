@@ -94,7 +94,9 @@ export function ProfessionalHowToVideosSection() {
                 >
                   <>
                     {">>"}{" "}
-                    {t("sections.professional_howto_videos.checkout_youtube_cta")}{" "}
+                    {t(
+                      "sections.professional_howto_videos.checkout_youtube_cta",
+                    )}{" "}
                     {"<<"}
                   </>
                 </motion.a>

@@ -94,7 +94,12 @@ export function TimeForArtSection() {
               />
             </div>
             <div className="absolute right-36">
-              <Image src="/time-for-art/cutter.png" width={200} height={100} alt="Cutter" />
+              <Image
+                src="/time-for-art/cutter.png"
+                width={200}
+                height={100}
+                alt="Cutter"
+              />
             </div>
           </div>
           <RadialGradient className="bg-pink" variant="center" />
@@ -126,7 +131,12 @@ export function TimeForArtSection() {
                 </div>
               )}
               {type === "image" && (
-                <Image src={content} width={180} height={180} alt="Art Content" />
+                <Image
+                  src={content}
+                  width={180}
+                  height={180}
+                  alt="Art Content"
+                />
               )}
             </motion.div>
           );
@@ -159,7 +169,12 @@ export function TimeForArtSection() {
               />
             </div>
             <div className="absolute right-0 md:-right-5 w-36">
-              <Image src="/time-for-art/cutter.png" width={200} height={100} alt="Cutter" />
+              <Image
+                src="/time-for-art/cutter.png"
+                width={200}
+                height={100}
+                alt="Cutter"
+              />
             </div>
           </div>
           <RadialGradient className="bg-pink" variant="center-xl" />
