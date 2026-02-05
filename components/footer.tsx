@@ -68,7 +68,7 @@ export function Footer(): JSX.Element {
             </li>
           </ul>
 
-          <Image src="/tube.svg" width="100%" height="auto" />
+          <img src="/tube.svg" width="100%" height="auto" alt="" />
         </div>
         <div className="md:col-span-2">
           <h4 className="mb-4 text-xl uppercase">
