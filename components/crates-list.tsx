@@ -39,8 +39,10 @@ export function CratesList({ products }: CratesProps) {
   const ref = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    const c = ref.current.offsetTop;
-    window.scrollTo({ top: c });
+    if (ref.current) {
+      const c = ref.current.offsetTop;
+      window.scrollTo({ top: c });
+    }
   }, [page]);
 
   if (products.length === 0) {
