@@ -3,6 +3,7 @@ import React from "react";
 import { Checkbox } from ".";
 import { sendMail } from "../utils/send-mail";
 import { FormattedText } from "./elements/formatted-text";
+import { CanvasCaptcha } from "./CanvasCaptcha";
 
 const initialFormData = {
   name: "",
@@ -26,6 +27,22 @@ export function ContactForm() {
   const [formStatus, setFormStatus] = React.useState<
     "submitted" | "success" | "error" | undefined
   >(undefined);
+  const [captchaData, setCaptchaData] = React.useState({
+    text: "",
+    userInput: "",
+    id: "",
+  });
+  const [captchaError, setCaptchaError] = React.useState("");
+  const formStartTime = React.useRef(Date.now());
+  const honeypotValue = React.useRef("");
+  const companyNameValue = React.useRef("");
+  const middleNameValue = React.useRef("");
+  const secondaryEmailValue = React.useRef("");
+
+  const handleCaptchaChange = (text: string, userInput: string, id: string) => {
+    setCaptchaData({ text, userInput, id });
+    setCaptchaError("");
+  };
 
   const handleInputChange = (event) => {
     if (formStatus !== "submitted" && !hasErrors()) {
@@ -37,6 +54,26 @@ export function ContactForm() {
         ...formData,
         [event.target.name]: !formData[event.target.name],
       });
+    }
+
+    if (event.target.name === "website") {
+      honeypotValue.current = event.target.value;
+      return;
+    }
+
+    if (event.target.name === "companyName") {
+      companyNameValue.current = event.target.value;
+      return;
+    }
+
+    if (event.target.name === "middleName") {
+      middleNameValue.current = event.target.value;
+      return;
+    }
+
+    if (event.target.name === "secondaryEmail") {
+      secondaryEmailValue.current = event.target.value;
+      return;
     }
 
     setFormData({
@@ -62,6 +99,7 @@ export function ContactForm() {
     event.preventDefault();
     setIsLoading(true);
     setFormStatus("submitted");
+    setCaptchaError("");
 
     //TODO: validate
     if (hasErrors()) {
@@ -70,18 +108,63 @@ export function ContactForm() {
       return;
     }
 
-    const res = await sendMail(
-      process.env.NEXT_PUBLIC_RECIPIENT_MAIL,
-      formData.name,
-      formData.email,
-      formData.message
-    );
-
-    if (res.status < 300) {
-      setFormData(initialFormData);
-      setFormStatus("success");
+    // Verify CAPTCHA
+    if (!captchaData.userInput || !captchaData.text) {
+      setFormStatus("error");
+      setCaptchaError(t("forms.captcha_error_empty"));
       setIsLoading(false);
-    } else {
+      return;
+    }
+
+    const timeTaken = Math.floor((Date.now() - formStartTime.current) / 1000);
+
+    try {
+      // Verify CAPTCHA with API
+      const captchaResponse = await fetch("/api/validate-captcha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          captchaId: captchaData.id,
+          userInput: captchaData.userInput,
+          captchaText: captchaData.text,
+          timeTaken,
+          honeypot: honeypotValue.current,
+        }),
+      });
+
+      const captchaResult = await captchaResponse.json();
+
+      if (!captchaResult.success || !captchaResult.token) {
+        setFormStatus("error");
+        setCaptchaError(t("forms.captcha_error_invalid"));
+        setIsLoading(false);
+        return;
+      }
+
+      // CAPTCHA verified, now send email
+      const res = await sendMail(
+        process.env.NEXT_PUBLIC_RECIPIENT_MAIL,
+        formData.name,
+        formData.email,
+        formData.message,
+        captchaResult.token,
+        Math.floor((Date.now() - formStartTime.current) / 1000),
+        honeypotValue.current,
+        companyNameValue.current,
+        middleNameValue.current,
+        secondaryEmailValue.current,
+      );
+
+      if (res.status < 300) {
+        setFormData(initialFormData);
+        setFormStatus("success");
+        setIsLoading(false);
+      } else {
+        setFormStatus("error");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
       setFormStatus("error");
       setIsLoading(false);
     }
@@ -104,7 +187,9 @@ export function ContactForm() {
       </p>
 
       <div className="mt-10">
-        <p className="text-lg mb-5">{t("forms.intro")}</p>
+        {formStatus !== "success" && (
+          <p className="text-lg mb-5">{t("forms.intro")}</p>
+        )}
         {formStatus !== "success" && (
           <form onSubmit={(event) => submitForm(event)}>
             <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-y-10 md:gap-x-20 justify-between text-left">
@@ -180,9 +265,83 @@ export function ContactForm() {
                 )}
               </div>
             </div>
+
+            <input
+              type="text"
+              name="website"
+              autoComplete="off"
+              tabIndex={-1}
+              onChange={handleInputChange}
+              style={{
+                position: "absolute",
+                left: "-9999px",
+                width: "1px",
+                height: "1px",
+                opacity: 0,
+              }}
+              aria-hidden="true"
+            />
+
+            <input
+              type="text"
+              name="companyName"
+              autoComplete="off"
+              tabIndex={-1}
+              onChange={handleInputChange}
+              style={{
+                position: "absolute",
+                left: "-9999px",
+                width: "1px",
+                height: "1px",
+                opacity: 0,
+              }}
+              aria-hidden="true"
+            />
+
+            <input
+              type="text"
+              name="middleName"
+              autoComplete="off"
+              tabIndex={-1}
+              onChange={handleInputChange}
+              style={{
+                position: "absolute",
+                left: "-9999px",
+                width: "1px",
+                height: "1px",
+                opacity: 0,
+              }}
+              aria-hidden="true"
+            />
+
+            <input
+              type="text"
+              name="secondaryEmail"
+              autoComplete="off"
+              tabIndex={-1}
+              onChange={handleInputChange}
+              style={{
+                position: "absolute",
+                left: "-9999px",
+                width: "1px",
+                height: "1px",
+                opacity: 0,
+              }}
+              aria-hidden="true"
+            />
+
+            <div className="col-span-2">
+              <CanvasCaptcha
+                onCaptchaChange={handleCaptchaChange}
+                error={
+                  formStatus === "error" && captchaError ? captchaError : ""
+                }
+              />
+            </div>
+
             <button
               type="submit"
-              className="font-display p-3 pt-2 pb-3 md:text-3xl inline-flex items-center content-center mt-5 max-w-max mx-auto bg-purple text-white px-10 mx-auto md:px-20"
+              className="font-display p-3 pt-2 pb-3 md:text-3xl inline-flex items-center content-center mt-5 max-w-max mx-auto bg-purple text-white px-10 md:px-20"
             >
               {isLoading ? "Sending…" : "Send"}
             </button>

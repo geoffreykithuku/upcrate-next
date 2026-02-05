@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ButtonProps {
   className: string;
   variant?: "default" | "outline";
-  onClick?: () => void;
+  onClick?: (e?: React.MouseEvent) => void;
   href?: string;
   disabled?: boolean;
   type?: "submit";
@@ -41,7 +41,7 @@ export function Button({
         whileTap={{ scale: 0.9 }}
         className={`cursor-pointer font-display p-3 pt-2 pb-3 md:text-3xl inline-block max-w-max mx-auto ${variantClassName} ${className}`}
       >
-        <Link href={href}>
+        <Link href={href} legacyBehavior>
           <a className="col-span-2 inline-flex items-center content-center gap-4">
             {children}
           </a>

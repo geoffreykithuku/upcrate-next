@@ -10,6 +10,7 @@ import { FormattedText } from "../elements/formatted-text";
 import { RadialGradient } from "../elements/radial-gradient";
 import { Caret } from "../elements/svg";
 import { PensAndBrushesSvg } from "../elements/svg/pens-and-brushes";
+import { CanvasCaptcha } from "../CanvasCaptcha";
 
 export function NewsletterSection({
   children,
@@ -27,6 +28,8 @@ export function NewsletterSection({
     formStatus,
     handleSubmit,
     handleChange,
+    handleCaptchaChange,
+    captchaError,
   } = useNewsletterForm();
 
   return (
@@ -116,6 +119,13 @@ export function NewsletterSection({
                       ) : null}
                     </div>
 
+                    <div className="mt-4">
+                      <CanvasCaptcha
+                        onCaptchaChange={handleCaptchaChange}
+                        error={captchaError}
+                      />
+                    </div>
+
                     <button
                       type="submit"
                       className="z-30 font-display p-3 pt-2 pb-3 w-full justify-center md:text-3xl inline-flex items-center relative mt-5 bg-green-darker hover:bg-green-dark text-white px-10 mx-auto"
@@ -184,6 +194,7 @@ export function NewsletterSection({
                     src="/newsletter/advantage01.gif"
                     width={600}
                     height={600}
+                    alt="Newsletter advantage"
                   />
                   <p className="text-2xl font-bold text-center">
                     {t("sections.newsletter_form.advantages.columns.0.text")}
@@ -194,6 +205,7 @@ export function NewsletterSection({
                     src="/newsletter/advantage02.gif"
                     width={600}
                     height={600}
+                    alt="Newsletter advantage"
                   />
                   <p className="text-2xl font-bold text-center">
                     {t("sections.newsletter_form.advantages.columns.1.text")}
@@ -204,6 +216,7 @@ export function NewsletterSection({
                     src="/newsletter/advantage03.gif"
                     width={600}
                     height={600}
+                    alt="Newsletter advantage"
                   />
                   <p className="text-2xl font-bold text-center">
                     {t("sections.newsletter_form.advantages.columns.2.text")}

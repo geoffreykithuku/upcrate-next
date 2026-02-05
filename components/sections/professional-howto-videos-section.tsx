@@ -21,6 +21,7 @@ export function ProfessionalHowToVideosSection() {
                 src="/how-to-videos/upcrate23.png"
                 width={306}
                 height={539}
+                alt="Upcrate #23 how-to video"
               />
               <div className="gap-3 flex md:items-end md:justify-between text-purple-dark md:text-2xl md:mt-2">
                 <div className="text-sm md:text-xl font-bold">#upcrate23</div>
@@ -39,6 +40,7 @@ export function ProfessionalHowToVideosSection() {
                 src="/how-to-videos/upcrate12.png"
                 width={306}
                 height={539}
+                alt="Upcrate #12 how-to video"
               />
               <div className="gap-3 flex md:items-end md:justify-between text-purple-dark md:text-2xl md:mt-2">
                 <div className="text-sm md:text-xl font-bold">#upcrate12</div>
@@ -59,6 +61,7 @@ export function ProfessionalHowToVideosSection() {
                 src="/how-to-videos/youtube.png"
                 width={630}
                 height={419}
+                alt="Professional how-to videos on YouTube"
               />
               <p className="mt-5 md:mt-10 text-base md:text-2xl">
                 {t("sections.professional_howto_videos.text")}
@@ -79,6 +82,7 @@ export function ProfessionalHowToVideosSection() {
                     src="/how-to-videos/youtube-logo.svg"
                     width={81}
                     height={56}
+                    alt="YouTube"
                   />
                 </a>
                 <motion.a
@@ -88,9 +92,13 @@ export function ProfessionalHowToVideosSection() {
                   whileTap={{ scale: 0.8 }}
                   whileHover={{ scale: 1.2 }}
                 >
-                  {">>"}{" "}
-                  {t("sections.professional_howto_videos.checkout_youtube_cta")}{" "}
-                  {"<<"}
+                  <>
+                    {">>"}{" "}
+                    {t(
+                      "sections.professional_howto_videos.checkout_youtube_cta",
+                    )}{" "}
+                    {"<<"}
+                  </>
                 </motion.a>
               </div>
             </div>
@@ -101,6 +109,7 @@ export function ProfessionalHowToVideosSection() {
                 src="/how-to-videos/upcrate21.png"
                 width={306}
                 height={539}
+                alt="Upcrate #21 how-to video"
               />
               <div className="gap-3 flex md:items-end md:justify-between text-purple-dark md:text-2xl md:mt-2">
                 <div className="text-sm md:text-xl font-bold">#upcrate21</div>
@@ -119,6 +128,7 @@ export function ProfessionalHowToVideosSection() {
                 src="/how-to-videos/upcrate21-2.png"
                 width={306}
                 height={539}
+                alt="Upcrate #21 how-to video"
               />
               <div className="gap-3 flex md:items-end md:justify-between text-purple-dark md:text-2xl md:mt-2">
                 <div className="text-sm md:text-xl font-bold">#upcrate21</div>
@@ -147,6 +157,7 @@ export function ProfessionalHowToVideosSection() {
                   src="/how-to-videos/youtube-logo.svg"
                   width={81}
                   height={56}
+                  alt="YouTube"
                 />
               </a>
               <a

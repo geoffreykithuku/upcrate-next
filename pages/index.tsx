@@ -78,6 +78,7 @@ export default function Home({ products }: CratesProps) {
         className="bg-pink text-purple-dark"
         title={t("pages.home.chosen_one_section.title")}
         buttonColors="bg-purple hover:bg-purple-dark text-white"
+        tightSpacing={true}
       />
     </>
   );
@@ -87,11 +88,17 @@ export const getStaticProps: GetStaticProps = async () => {
   const wooCommerceProducts = await fetchWooCommerceProducts({
     category: "49",
     status: "publish",
-  }).catch((error) => console.error(error));
+  }).catch((error) => {
+    console.error("WooCommerce API error:", error);
+    return null;
+  });
 
   if (!wooCommerceProducts) {
     return {
-      notFound: true,
+      props: {
+        products: [],
+      },
+      revalidate: 60,
     };
   }
 

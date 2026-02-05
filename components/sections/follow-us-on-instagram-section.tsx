@@ -19,6 +19,7 @@ export function FollowUsOnInstagramSection() {
             layout="responsive"
             width={330}
             height={330}
+            alt="Instagram post"
           />
         </div>
         <div className="w-1/3 md:w-1/4">
@@ -27,6 +28,7 @@ export function FollowUsOnInstagramSection() {
             layout="responsive"
             width={330}
             height={330}
+            alt="Instagram post"
           />
         </div>
         <div className="w-1/3 md:w-1/4">
@@ -35,6 +37,7 @@ export function FollowUsOnInstagramSection() {
             layout="responsive"
             width={330}
             height={330}
+            alt="Instagram post"
           />
         </div>
 
@@ -44,6 +47,7 @@ export function FollowUsOnInstagramSection() {
             layout="responsive"
             width={330}
             height={330}
+            alt="Instagram post"
           />
         </div>
 

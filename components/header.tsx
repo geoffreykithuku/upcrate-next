@@ -39,8 +39,8 @@ function HeaderNavLink({
       whileHover="hover"
       animate="rest"
     >
-      <Link href={href}>
-        <div>
+      <Link href={href} legacyBehavior>
+        <a>
           <div
             className="absolute top-0 left-0"
             style={{ width: 100, left: -10, top: 10 }}
@@ -62,7 +62,7 @@ function HeaderNavLink({
             </motion.svg>
           </div>
           {children}
-        </div>
+        </a>
       </Link>
     </motion.div>
   );
@@ -79,7 +79,8 @@ export function Header(): JSX.Element {
 
   usePersistLocaleCookie();
 
-  const saveSelectedLanguage = () => {
+  const saveSelectedLanguage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setLanguageSelectModalOpen(false);
     router.push(router.pathname, router.asPath, { locale: selectedLanguage });
   };
@@ -99,15 +100,15 @@ export function Header(): JSX.Element {
       >
         <nav className="grid grid-cols-4 md:flex justify-between items-center cursor-pointer">
           <div className="col-span-1">
-            <Link href="/">
-              <div className="inline-block">
+            <Link href="/" legacyBehavior>
+              <a className="inline-block">
                 <span className="inline-block lg:hidden">
                   <CaptainCrateSvg variant="head-only" />
                 </span>
                 <span className="hidden lg:block min-w-desktopLogo">
                   <Logo />
                 </span>
-              </div>
+              </a>
             </Link>
           </div>
           <div className="col-span-2 text-center">
@@ -202,11 +203,19 @@ export function Header(): JSX.Element {
                 {lang === "en" && <a>{t("language_switch_en")}</a>}
                 {lang === "de" && <a>{t("language_switch_de")}</a>}
                 <div className="w-10">
-                  <Image src="/globe.svg" width={36} height={36} />
+                  <Image
+                    src="/globe.svg"
+                    width={36}
+                    height={36}
+                    alt="Language"
+                  />
                 </div>
                 <Modal
                   open={languageSelectModalOpen}
-                  onClose={() => setLanguageSelectModalOpen(false)}
+                  onClose={(e) => {
+                    e?.stopPropagation();
+                    setLanguageSelectModalOpen(false);
+                  }}
                   className="bg-orange"
                 >
                   <Dialog.Title
@@ -233,7 +242,10 @@ export function Header(): JSX.Element {
                   </div>
                   <div className="flex space-x-4 sm:space-x-10 text-center justify-center">
                     <Button
-                      onClick={() => setLanguageSelectModalOpen(false)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setLanguageSelectModalOpen(false);
+                      }}
                       className="border-purple border-2 text-purple"
                     >
                       {t("cancel")}

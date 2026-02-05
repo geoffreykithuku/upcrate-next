@@ -10,7 +10,7 @@ export function TheGoldenCrateSection() {
   const { width } = useWindowSize();
 
   const handleImageLoad = (
-    event: React.SyntheticEvent<HTMLImageElement, Event>
+    event: React.SyntheticEvent<HTMLImageElement, Event>,
   ) => {
     setHeight(event.currentTarget.height);
   };
@@ -41,6 +41,7 @@ export function TheGoldenCrateSection() {
             width={610}
             height={612}
             onLoad={(event) => handleImageLoad(event)}
+            alt="The Golden Crate"
           />
         </div>
         <div className="w-full h-full">
@@ -68,6 +69,7 @@ export function TheGoldenCrateSection() {
                     src="/golden-crate/small01.png"
                     width={236}
                     height={314}
+                    alt="Artist @jj8.kaiser.art artwork"
                   />
                 </div>
               </a>
@@ -83,6 +85,7 @@ export function TheGoldenCrateSection() {
                     src="/golden-crate/small02.png"
                     width={236}
                     height={314}
+                    alt="Artist @hawklbood artwork"
                   />
                 </div>
               </a>

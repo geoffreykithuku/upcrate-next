@@ -22,10 +22,10 @@ export default function ErrorPage() {
         <div className="z-0 bg-black text-center">
           <Image
             src="/404/background.png"
-            objectFit="cover"
-            objectPosition="center"
             width={1920}
             height={1054}
+            alt=""
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>
       </div>

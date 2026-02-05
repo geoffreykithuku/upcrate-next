@@ -15,7 +15,12 @@ export function TheBottlePostSection() {
         </h3>
 
         <div className="max-w-8xl mt-5 md:mt-10 mx-auto text-center">
-          <Image src="/the-bottle-post/big.jpg" width={1951} height={489} />
+          <Image
+            src="/the-bottle-post/big.jpg"
+            width={1951}
+            height={489}
+            alt="The Bottle Post"
+          />
 
           <div className="w-full h-full">
             <div className="flex flex-col text-purple-dark h-full justify-items-end mt-5 md:mt-0 md:text-xl">
@@ -36,6 +41,7 @@ export function TheBottlePostSection() {
                       src="/the-bottle-post/small01.jpg"
                       width={500}
                       height={500}
+                      alt="Upcrate #31 artwork"
                     />
                     <div className="text-xs md:text-xl">#upcrate31</div>
                   </a>
@@ -52,6 +58,7 @@ export function TheBottlePostSection() {
                       src="/the-bottle-post/small02.jpg"
                       width={500}
                       height={500}
+                      alt="Upcrate #28 artwork"
                     />
                     <div className="text-xs md:text-xl">#upcrate28</div>
                   </a>
@@ -68,6 +75,7 @@ export function TheBottlePostSection() {
                       src="/the-bottle-post/small03.jpg"
                       width={500}
                       height={500}
+                      alt="Upcrate #26 artwork"
                     />
                     <div className="text-xs md:text-xl">#upcrate26</div>
                   </a>

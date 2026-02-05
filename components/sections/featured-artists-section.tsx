@@ -25,6 +25,7 @@ export function FeaturedArtistsWeWorkedWithSection() {
                 width={385}
                 height={385}
                 layout="responsive"
+                alt="Featured artwork by @neimykanani"
               />
               <div className="flex items-end justify-between text-purple-dark text-2xl mt-2">
                 <div className="text-bold">#upcrate14</div>
@@ -44,6 +45,7 @@ export function FeaturedArtistsWeWorkedWithSection() {
                 width={385}
                 height={385}
                 layout="responsive"
+                alt="Featured artwork by @myweirdart_"
               />
               <div className="flex items-end justify-between text-purple-dark text-2xl mt-2">
                 <div className="text-bold">#upcrate7</div>
@@ -71,6 +73,7 @@ export function FeaturedArtistsWeWorkedWithSection() {
                 width={385}
                 height={385}
                 layout="responsive"
+                alt="Featured artwork by @nikalarkina"
               />
               <div className="flex items-end justify-between text-purple-dark text-2xl mt-2">
                 <div className="text-bold">#upcrate13</div>
@@ -90,6 +93,7 @@ export function FeaturedArtistsWeWorkedWithSection() {
                 width={385}
                 height={385}
                 layout="responsive"
+                alt="Featured artwork by @clemstjw"
               />
               <div className="flex items-end justify-between text-purple-dark text-2xl mt-2">
                 <div className="text-bold">#upcrate5</div>

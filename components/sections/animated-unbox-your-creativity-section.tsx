@@ -27,7 +27,7 @@ export function AnimatedUnboxYourCreativitySection() {
         <UnboxYourCreativitySvg />
         <div className="-mt-12">
           <Parallax offset={100}>
-            <Image src="/box.png" width={1064} height={560} />
+            <Image src="/box.png" width={1064} height={560} alt="Upcrate Box" />
           </Parallax>
         </div>
       </div>

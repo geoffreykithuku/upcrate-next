@@ -26,6 +26,7 @@ export function HowItWorksSection() {
                 layout="intrinsic"
                 width={390}
                 height={312}
+                alt="Step 1: Choose your subscription"
               />
               <p>{t("sections.how_it_works.steps.0.text")}</p>
             </div>
@@ -40,6 +41,7 @@ export function HowItWorksSection() {
                 layout="intrinsic"
                 width={482}
                 height={322}
+                alt="Step 2: Receive your crate"
               />
               <p>{t("sections.how_it_works.steps.1.text")}</p>
             </div>
@@ -54,6 +56,7 @@ export function HowItWorksSection() {
                 layout="intrinsic"
                 width={389}
                 height={311}
+                alt="Step 3: Unbox your supplies"
               />
               <p>{t("sections.how_it_works.steps.2.text")}</p>
             </div>
@@ -68,6 +71,7 @@ export function HowItWorksSection() {
                 layout="intrinsic"
                 width={432}
                 height={341}
+                alt="Step 4: Watch the tutorial"
               />
               <p>{t("sections.how_it_works.steps.3.text")}</p>
             </div>
@@ -82,6 +86,7 @@ export function HowItWorksSection() {
                 layout="intrinsic"
                 width={390}
                 height={312}
+                alt="Step 5: Create your artwork"
               />
               <p>{t("sections.how_it_works.steps.4.text")}</p>
             </div>

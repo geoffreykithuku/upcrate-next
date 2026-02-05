@@ -39,8 +39,10 @@ export function CratesList({ products }: CratesProps) {
   const ref = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    const c = ref.current.offsetTop;
-    window.scrollTo({ top: c });
+    if (ref.current) {
+      const c = ref.current.offsetTop;
+      window.scrollTo({ top: c });
+    }
   }, [page]);
 
   if (products.length === 0) {
@@ -75,7 +77,7 @@ export function CratesList({ products }: CratesProps) {
               {products
                 .slice(
                   page * PRODUCTS_PER_PAGE,
-                  page * PRODUCTS_PER_PAGE + PRODUCTS_PER_PAGE
+                  page * PRODUCTS_PER_PAGE + PRODUCTS_PER_PAGE,
                 )
                 .map((crate) => {
                   return (
@@ -147,10 +149,12 @@ export function CratesList({ products }: CratesProps) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <div className="transform rotate-180">
-                <Caret />
-              </div>
-              {t("pages.crates.crates_list.previous_page_button")}
+              <>
+                <div className="transform rotate-180">
+                  <Caret />
+                </div>
+                {t("pages.crates.crates_list.previous_page_button")}
+              </>
             </motion.button>
 
             <div className="hidden md:block text-center">
@@ -164,8 +168,10 @@ export function CratesList({ products }: CratesProps) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              {t("pages.crates.crates_list.next_page_button")}
-              <Caret />
+              <>
+                {t("pages.crates.crates_list.next_page_button")}
+                <Caret />
+              </>
             </motion.button>
           </div>
         </div>

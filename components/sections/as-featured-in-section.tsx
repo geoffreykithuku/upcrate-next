@@ -24,6 +24,7 @@ export function AsFeaturedInSection() {
               src="/as-featured-in/the-guardian.png"
               width={400}
               height={103}
+              alt="The Guardian logo"
             />
           </motion.a>
           <motion.a
@@ -36,6 +37,7 @@ export function AsFeaturedInSection() {
               src="/as-featured-in/kreativ-suechtig.svg"
               width={400}
               height={103}
+              alt="Kreativ Süchtig logo"
             />
           </motion.a>
           <motion.a
@@ -44,7 +46,12 @@ export function AsFeaturedInSection() {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.8 }}
           >
-            <Image src="/as-featured-in/palette.png" width={222} height={103} />
+            <Image
+              src="/as-featured-in/palette.png"
+              width={222}
+              height={103}
+              alt="Palette"
+            />
           </motion.a>
         </div>
       </div>

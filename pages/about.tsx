@@ -284,6 +284,7 @@ export default function About() {
           layout="responsive"
           width={1920}
           height={768}
+          alt=""
         />
       </section>
 

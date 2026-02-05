@@ -1,4 +1,4 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 import React from "react";
 import { useScrollPosition } from "../../../hooks/use-scroll-position";
 
@@ -10,7 +10,7 @@ export function Logo() {
       className="relative"
       style={{ height: 50, marginTop: scrollTop > 0 ? -16 : 0 }}
     >
-      <AnimateSharedLayout type="crossfade">
+      <LayoutGroup>
         <AnimatePresence>
           {scrollTop > 0 ? (
             <motion.svg
@@ -161,7 +161,7 @@ export function Logo() {
             </motion.svg>
           )}
         </AnimatePresence>
-      </AnimateSharedLayout>
+      </LayoutGroup>
     </div>
   );
 }
