@@ -79,7 +79,8 @@ export function Header(): JSX.Element {
 
   usePersistLocaleCookie();
 
-  const saveSelectedLanguage = () => {
+  const saveSelectedLanguage = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
     setLanguageSelectModalOpen(false);
     router.push(router.pathname, router.asPath, { locale: selectedLanguage });
   };
@@ -211,7 +212,10 @@ export function Header(): JSX.Element {
                 </div>
                 <Modal
                   open={languageSelectModalOpen}
-                  onClose={() => setLanguageSelectModalOpen(false)}
+                  onClose={(e) => {
+                    e?.stopPropagation();
+                    setLanguageSelectModalOpen(false);
+                  }}
                   className="bg-orange"
                 >
                   <Dialog.Title
@@ -238,7 +242,10 @@ export function Header(): JSX.Element {
                   </div>
                   <div className="flex space-x-4 sm:space-x-10 text-center justify-center">
                     <Button
-                      onClick={() => setLanguageSelectModalOpen(false)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setLanguageSelectModalOpen(false);
+                      }}
                       className="border-purple border-2 text-purple"
                     >
                       {t("cancel")}

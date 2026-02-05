@@ -4,7 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 
 interface ModalProps {
   open: boolean;
-  onClose: () => void;
+  onClose: (e?: React.MouseEvent) => void;
   className?: string;
 }
 
@@ -30,7 +30,7 @@ export function Modal({
         className="fixed z-50 inset-0 overflow-y-auto"
         initialFocus={cancelButtonRef}
         open={open}
-        onClose={onClose}
+        onClose={() => onClose()}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -66,7 +66,7 @@ export function Modal({
             >
               <div className="sm:p-6 sm:pb-4">
                 <div className="sm:flex sm:items-start">
-                  <button onClick={onClose} className="absolute right-2 top-2">
+                  <button onClick={(e) => onClose(e)} className="absolute right-2 top-2">
                     <span className="text-4xl font-display inline-block p-2">
                       X
                     </span>

@@ -4,7 +4,7 @@ import Link from "next/link";
 interface ButtonProps {
   className: string;
   variant?: "default" | "outline";
-  onClick?: () => void;
+  onClick?: (e?: React.MouseEvent) => void;
   href?: string;
   disabled?: boolean;
   type?: "submit";
