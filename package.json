@@ -16,7 +16,7 @@
     "@types/woocommerce__woocommerce-rest-api": "^1.0.2",
     "@woocommerce/woocommerce-rest-api": "^1.0.1",
     "axios": "^0.21.1",
-    "framer-motion": "^4.1.17",
+    "framer-motion": "^10.16.4",
     "i18n": "^0.13.3",
     "next": "^13.5.6",
     "next-translate": "^1.0.6",
