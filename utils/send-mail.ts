@@ -1,11 +1,28 @@
 import axios from "axios";
 
-export const sendMail = async (recipientMail, name, senderMail, content) => {
+export const sendMail = async (
+  recipientMail,
+  name,
+  senderMail,
+  content,
+  captchaToken = "",
+  timeTaken = 0,
+  honeypot = "",
+  companyName = "",
+  middleName = "",
+  secondaryEmail = "",
+) => {
   const data = {
     recipientMail,
     name,
     senderMail,
     content,
+    captchaToken,
+    timeTaken,
+    honeypot,
+    companyName,
+    middleName,
+    secondaryEmail,
   };
 
   try {

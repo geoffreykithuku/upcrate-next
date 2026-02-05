@@ -1,7 +1,36 @@
 import nodemailer from "nodemailer";
+import { validateBotProtectionFromRequest } from "../../utils/bot-protection";
 
 export default async (req, res) => {
-  const { senderMail, name, content, recipientMail } = req.body;
+  const {
+    senderMail,
+    name,
+    content,
+    recipientMail,
+    honeypot,
+    companyName,
+    middleName,
+    secondaryEmail,
+  } = req.body;
+
+  // Bot Protection: Check honeypot fields
+  if (honeypot || companyName || middleName || secondaryEmail) {
+    res.status(400).json({
+      success: false,
+      error: "Invalid submission",
+    });
+    return;
+  }
+
+  // Bot Protection: Validate CAPTCHA, honeypot, and timing
+  const botCheck = validateBotProtectionFromRequest(req);
+  if (!botCheck.isValid) {
+    res.status(400).json({
+      success: false,
+      error: botCheck.error || "Invalid submission",
+    });
+    return;
+  }
 
   // Check if fields are all filled
   if (
@@ -46,7 +75,7 @@ const mailer = ({ senderMail, name, text, recipientMail }) => {
 
   return new Promise((resolve, reject) => {
     transporter.sendMail(message, (error, info) =>
-      error ? reject(error) : resolve(info)
+      error ? reject(error) : resolve(info),
     );
   });
 };

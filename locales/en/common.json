@@ -39,7 +39,11 @@
     "success_message": "Thank you.\nWe will answer you as soon as we have finished the artwork",
     "terms_label": "I have read and accepted the <1>terms & conditions</1> and the <2>privacy policy</2>",
     "terms_error": "Please accept our terms and condtions.",
-    "privacy_label": "By entering your email address, you agree to the terms of this <1>privacy policy.</1>*"
+    "privacy_label": "By entering your email address, you agree to the terms of this <1>privacy policy.</1>*",
+    "captcha_label": "Type the text below",
+    "captcha_placeholder": "Enter text",
+    "captcha_error_empty": "Please enter the verification code",
+    "captcha_error_invalid": "Incorrect verification code. Please try again."
   },
 
   "footer": {
@@ -124,10 +128,9 @@
         },
         {
           "countdown": {
-          "text": "Countdown till the 10th of January, March, May, July, September, or November"
+            "text": "Countdown till the 10th of January, March, May, July, September, or November"
+          }
         }
-        }
-        
       ],
       "chosen_one_section": {
         "title": "You’re one of the chosen ones who scrolled all the way down.\nCheck out Captain Crate’s offers here:"
@@ -206,7 +209,6 @@
           "cta": "Subscribe now",
           "dollar_estimation": "(~ 31.81 USD)"
         }
-        
       ],
       "cancellation_text": "can be cancelled any time"
     },

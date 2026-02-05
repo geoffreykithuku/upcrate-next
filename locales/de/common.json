@@ -39,7 +39,11 @@
     "success_message": "Danke Danke.\nWir malen noch kurz zu Ende und antworten dir dann:)",
     "terms_label": "Ich habe die <1>AGB</1> und <2>Datenschutzrichtlinie</2> gelesen und akzeptiert",
     "terms_error": "Bitte akzeptiere unsere allgemeinen Geschäftsbedingungen.",
-    "privacy_label": "Mit dem Eintragen deiner E-Mail Adresse nimmst du unsere <1>Datenschutzbestimmungen</1> an.*"
+    "privacy_label": "Mit dem Eintragen deiner E-Mail Adresse nimmst du unsere <1>Datenschutzbestimmungen</1> an.*",
+    "captcha_label": "Gib den Text unten ein",
+    "captcha_placeholder": "Text eingeben",
+    "captcha_error_empty": "Bitte geben Sie den Bestätigungscode ein",
+    "captcha_error_invalid": "Falscher Bestätigungscode. Bitte versuchen Sie es erneut."
   },
 
   "footer": {

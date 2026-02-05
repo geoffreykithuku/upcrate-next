@@ -2,6 +2,7 @@ import useTranslation from "next-translate/useTranslation";
 import { useNewsletterForm } from "../hooks/use-newsletter-form";
 import { FormattedText } from "./elements/formatted-text";
 import { Caret } from "./elements/svg";
+import { CanvasCaptcha } from "./CanvasCaptcha";
 
 export function FooterNewsletterForm() {
   const { t } = useTranslation("common");
@@ -14,6 +15,8 @@ export function FooterNewsletterForm() {
     formStatus,
     handleSubmit,
     handleChange,
+    handleCaptchaChange,
+    captchaError,
   } = useNewsletterForm();
 
   return (
@@ -44,6 +47,78 @@ export function FooterNewsletterForm() {
             />
           </span>
         </label>
+
+        <input
+          type="text"
+          name="website"
+          autoComplete="off"
+          tabIndex={-1}
+          onChange={handleChange}
+          style={{
+            position: "absolute",
+            left: "-9999px",
+            width: "1px",
+            height: "1px",
+            opacity: 0,
+          }}
+          aria-hidden="true"
+        />
+
+        <input
+          type="text"
+          name="companyName"
+          autoComplete="off"
+          tabIndex={-1}
+          onChange={handleChange}
+          style={{
+            position: "absolute",
+            left: "-9999px",
+            width: "1px",
+            height: "1px",
+            opacity: 0,
+          }}
+          aria-hidden="true"
+        />
+
+        <input
+          type="text"
+          name="middleName"
+          autoComplete="off"
+          tabIndex={-1}
+          onChange={handleChange}
+          style={{
+            position: "absolute",
+            left: "-9999px",
+            width: "1px",
+            height: "1px",
+            opacity: 0,
+          }}
+          aria-hidden="true"
+        />
+
+        <input
+          type="text"
+          name="secondaryEmail"
+          autoComplete="off"
+          tabIndex={-1}
+          onChange={handleChange}
+          style={{
+            position: "absolute",
+            left: "-9999px",
+            width: "1px",
+            height: "1px",
+            opacity: 0,
+          }}
+          aria-hidden="true"
+        />
+
+        <div className="mb-4">
+          <CanvasCaptcha
+            onCaptchaChange={handleCaptchaChange}
+            error={captchaError}
+          />
+        </div>
+
         <div className="relative">
           <input
             type="email"

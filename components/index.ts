@@ -8,3 +8,4 @@ export * from "./elements/svg";
 export * from "./sections/hero-section";
 export * from "./sections/unbox-your-creativity-section";
 export * from "./sections/subscribe-now-section";
+export * from "./CanvasCaptcha";

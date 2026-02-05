@@ -1,6 +1,14 @@
 import axios from "axios";
 
-export async function addMember(email: string) {
+export async function addMember(
+  email: string,
+  captchaToken = "",
+  timeTaken = 0,
+  honeypot = "",
+  companyName = "",
+  middleName = "",
+  secondaryEmail = "",
+) {
   try {
     const response = await axios({
       method: "post",
@@ -10,6 +18,12 @@ export async function addMember(email: string) {
       },
       data: {
         email,
+        captchaToken,
+        timeTaken,
+        honeypot,
+        companyName,
+        middleName,
+        secondaryEmail,
       },
     });
 
