@@ -43,7 +43,7 @@
     "captcha_label": "Type the text below",
     "captcha_placeholder": "Enter text",
     "captcha_error_empty": "Please enter the verification code",
-    "captcha_error_invalid": "Incorrect verification code. Please try again."
+    "captcha_error_invalid": "Invalid submission. Please try again."
   },
 
   "footer": {
