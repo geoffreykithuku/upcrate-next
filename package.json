@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
-    "@types/react": "^19.2.13",
+    "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.5",
     "autoprefixer": "^10.2.5",
     "moment": "^2.29.1",
