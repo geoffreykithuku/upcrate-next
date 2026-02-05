@@ -20,13 +20,14 @@ export function JoinTheArtCrewSection({
           {t("sections.join_the_artcrew.title")}
         </h3>
         <div className="md:flex align-center justify-center gap-20">
-          <div className="mt-10">
+          <div className="mt-10 text-center">
             <Image
               src="/join-the-art-crew/0.png"
               layout="fixed"
               width={170}
               height={170}
               alt="Join step icon"
+              className="mx-auto mb-2"
             />
             <h4 className="text-2xl font-bold text-purple-dark">
               {t("sections.join_the_artcrew.steps.0.title")}
@@ -35,13 +36,14 @@ export function JoinTheArtCrewSection({
               {t("sections.join_the_artcrew.steps.0.text")}
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 text-center">
             <Image
               src="/join-the-art-crew/1.png"
               layout="fixed"
               width={170}
               height={170}
               alt="Share step icon"
+              className="mx-auto mb-2"
             />
             <h4 className="text-2xl font-bold text-purple-dark">
               {t("sections.join_the_artcrew.steps.1.title")}
@@ -50,13 +52,14 @@ export function JoinTheArtCrewSection({
               {t("sections.join_the_artcrew.steps.1.text")}
             </p>
           </div>
-          <div className="mt-10">
+          <div className="mt-10 text-center">
             <Image
               src="/join-the-art-crew/2.png"
               layout="fixed"
               width={170}
               height={170}
               alt="Earn step icon"
+              className="mx-auto mb-2"
             />
             <h4 className="text-2xl font-bold text-purple-dark">
               {t("sections.join_the_artcrew.steps.2.title")}
