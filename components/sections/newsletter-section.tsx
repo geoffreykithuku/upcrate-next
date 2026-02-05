@@ -10,6 +10,7 @@ import { FormattedText } from "../elements/formatted-text";
 import { RadialGradient } from "../elements/radial-gradient";
 import { Caret } from "../elements/svg";
 import { PensAndBrushesSvg } from "../elements/svg/pens-and-brushes";
+import { CanvasCaptcha } from "../CanvasCaptcha";
 
 export function NewsletterSection({
   children,
@@ -27,6 +28,8 @@ export function NewsletterSection({
     formStatus,
     handleSubmit,
     handleChange,
+    handleCaptchaChange,
+    captchaError,
   } = useNewsletterForm();
 
   return (
@@ -114,6 +117,13 @@ export function NewsletterSection({
                           {error}
                         </p>
                       ) : null}
+                    </div>
+
+                    <div className="mt-4">
+                      <CanvasCaptcha
+                        onCaptchaChange={handleCaptchaChange}
+                        error={captchaError}
+                      />
                     </div>
 
                     <button
