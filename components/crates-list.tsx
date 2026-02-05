@@ -147,10 +147,12 @@ export function CratesList({ products }: CratesProps) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <div className="transform rotate-180">
-                <Caret />
-              </div>
-              {t("pages.crates.crates_list.previous_page_button")}
+              <>
+                <div className="transform rotate-180">
+                  <Caret />
+                </div>
+                {t("pages.crates.crates_list.previous_page_button")}
+              </>
             </motion.button>
 
             <div className="hidden md:block text-center">
@@ -164,8 +166,10 @@ export function CratesList({ products }: CratesProps) {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              {t("pages.crates.crates_list.next_page_button")}
-              <Caret />
+              <>
+                {t("pages.crates.crates_list.next_page_button")}
+                <Caret />
+              </>
             </motion.button>
           </div>
         </div>
