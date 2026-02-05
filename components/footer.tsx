@@ -90,7 +90,7 @@ export function Footer(): JSX.Element {
               </Link>
             </li>
           </ul>
-          <Image src="/pen.svg" width="100%" height="auto" />
+          <img src="/pen.svg" width="100%" height="auto" alt="" />
         </div>
         <div className="md:col-span-2 flex flex-col justify-between">
           <FooterNewsletterForm/>
