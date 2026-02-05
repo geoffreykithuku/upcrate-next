@@ -78,6 +78,7 @@ export default function Home({ products }: CratesProps) {
         className="bg-pink text-purple-dark"
         title={t("pages.home.chosen_one_section.title")}
         buttonColors="bg-purple hover:bg-purple-dark text-white"
+        tightSpacing={true}
       />
     </>
   );

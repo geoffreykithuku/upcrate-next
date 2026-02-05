@@ -9,12 +9,14 @@ interface SubscribeNowSectionProps {
   className?: string;
   title?: string;
   buttonColors?: string;
+  tightSpacing?: boolean;
 }
 
 export function UnboxYourCreativitySection({
   className,
   title,
   buttonColors,
+  tightSpacing = false,
 }: React.PropsWithChildren<SubscribeNowSectionProps>): JSX.Element {
   const { t } = useTranslation("common");
 
@@ -23,13 +25,14 @@ export function UnboxYourCreativitySection({
       <Parallax offset={40}>
         <Image
           src="/unbox-your-creativity.svg"
-          width={280}
-          height={100}
+          width={220}
+          height={80}
           alt="Unbox Your Creativity"
+          className={`mx-auto block ${tightSpacing ? "-mb-8" : "mb-4"}`}
         />
       </Parallax>
 
-      <h3 className="text-xl md:text-4xl mx-auto text-center max-w-5xl mt-6 font-bold whitespace-pre-line">
+      <h3 className="text-xl md:text-4xl mx-auto text-center max-w-5xl mt-0 font-bold whitespace-pre-line">
         {title}
       </h3>
       <Button

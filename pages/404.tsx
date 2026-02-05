@@ -25,7 +25,7 @@ export default function ErrorPage() {
             width={1920}
             height={1054}
             alt=""
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: "cover", objectPosition: "center" }}
           />
         </div>
       </div>

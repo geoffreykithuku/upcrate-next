@@ -59,7 +59,16 @@ export function Footer(): JSX.Element {
             </li>
           </ul>
 
-          <img src="/tube.svg" width="100%" height="auto" alt="" />
+          <img
+            src="/tube.svg"
+            style={{
+              maxWidth: "100px",
+              height: "auto",
+              marginTop: "2rem",
+              marginBottom: "2rem",
+            }}
+            alt=""
+          />
         </div>
         <div className="md:col-span-2">
           <h4 className="mb-4 text-xl uppercase">
@@ -79,7 +88,11 @@ export function Footer(): JSX.Element {
               </Link>
             </li>
           </ul>
-          <img src="/pen.svg" width="100%" height="auto" alt="" />
+          <img
+            src="/pen.svg"
+            style={{ maxWidth: "100px", height: "150px", marginLeft: "0.6rem", marginBottom: "1rem" }}
+            alt=""
+          />
         </div>
         <div className="md:col-span-2 flex flex-col justify-between">
           <FooterNewsletterForm />
