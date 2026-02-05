@@ -202,7 +202,7 @@ export function Header(): JSX.Element {
                 {lang === "en" && <a>{t("language_switch_en")}</a>}
                 {lang === "de" && <a>{t("language_switch_de")}</a>}
                 <div className="w-10">
-                  <Image src="/globe.svg" width={36} height={36} />
+                  <Image src="/globe.svg" width={36} height={36} alt="Language" />
                 </div>
                 <Modal
                   open={languageSelectModalOpen}

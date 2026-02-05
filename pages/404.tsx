@@ -26,6 +26,7 @@ export default function ErrorPage() {
             objectPosition="center"
             width={1920}
             height={1054}
+            alt=""
           />
         </div>
       </div>

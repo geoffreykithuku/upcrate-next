@@ -60,6 +60,7 @@ export function HeroSection({
             width={457}
             height={490}
             onLoad={(event) => handleImageLoad(event)}
+            alt=""
           />
         </div>
         <div
@@ -88,6 +89,7 @@ export function HeroSection({
             width={1200}
             height={521.6}
             onLoad={(event) => handleImageLoad(event)}
+            alt=""
           />
         </div>
       </div>

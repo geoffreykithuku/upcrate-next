@@ -31,6 +31,7 @@ export function UpcrateAsGiftSection() {
           layout="fixed"
           width={2200}
           height={889}
+          alt=""
         />
       </div>
       <div className="md:hidden absolute top-0 right-0 bottom-0 left-0 z-0">
@@ -39,6 +40,7 @@ export function UpcrateAsGiftSection() {
           layout="fixed"
           width={1100}
           height={444.5}
+          alt=""
         />
       </div>
       <div className="z-10 relative flex flex-col justify-center items-center">
@@ -51,7 +53,7 @@ export function UpcrateAsGiftSection() {
             animate={isVisible ? "visible" : "hidden"}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <Image src="/upcrate-as-gift/box.png" width={900} height={566} />
+            <Image src="/upcrate-as-gift/box.png" width={900} height={566} alt="Gift Box" />
           </motion.div>
         </Parallax>
         <Button

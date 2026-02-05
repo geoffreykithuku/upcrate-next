@@ -1,6 +1,5 @@
 import Trans from "next-translate/Trans";
 import useTranslation from "next-translate/useTranslation";
-import Image from "next/image";
 import Link from "next/link";
 import { CaptainCrateSvg } from "./elements/svg/cpt-crate-svg";
 import { FooterNewsletterForm } from "./footer-newsletter-form";

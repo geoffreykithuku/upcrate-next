@@ -26,7 +26,7 @@ export function UpcrateBattleSection() {
         <div className="md:flex align-center justify-center md:space-x-20 md:text-xl text-purple-dark">
           <div className="mt-10">
             <h4 className="text-left mb-3">TOPIC: Sketched Dreams</h4>
-            <Image src="/upcrate-battle/topic01.jpg" width={330} height={330} />
+            <Image src="/upcrate-battle/topic01.jpg" width={330} height={330} alt="Battle Topic" />
             <div className="flex items-end justify-between">
               <div className="text-bold">#upcrate19</div>
               <a
@@ -41,7 +41,7 @@ export function UpcrateBattleSection() {
           </div>
           <div className="mt-10">
             <h4 className="text-left mb-3">TOPIC: Mysterious Mind</h4>
-            <Image src="/upcrate-battle/topic02.jpg" width={330} height={330} />
+            <Image src="/upcrate-battle/topic02.jpg" width={330} height={330} alt="Battle Topic" />
             <div className="flex items-end justify-between">
               <div className="text-bold">#upcrate16</div>
               <a
@@ -56,7 +56,7 @@ export function UpcrateBattleSection() {
           </div>
           <div className="mt-10">
             <h4 className="text-left mb-3">TOPIC: What can you see</h4>
-            <Image src="/upcrate-battle/topic03.jpg" width={330} height={330} />
+            <Image src="/upcrate-battle/topic03.jpg" width={330} height={330} alt="Battle Topic" />
             <div className="flex items-end justify-between">
               <div className="text-bold">#upcrate11</div>
               <a
@@ -101,6 +101,7 @@ export function UpcrateBattleSection() {
                 src="/upcrate-battle/how-to-01.jpg"
                 width={600}
                 height={480}
+                alt="Step 1: How to participate"
               />
               <div className="flex justify-between">
                 <span className="font-bold font-display text-5xl">1.</span>
@@ -112,6 +113,7 @@ export function UpcrateBattleSection() {
                 src="/upcrate-battle/how-to-02.jpg"
                 width={600}
                 height={480}
+                alt="Step 2: How to participate"
               />
               <div className="flex justify-between text-right">
                 <span className="font-bold font-display text-5xl">2.</span>
@@ -123,6 +125,7 @@ export function UpcrateBattleSection() {
                 src="/upcrate-battle/how-to-03.jpg"
                 width={600}
                 height={480}
+                alt="Step 3: How to participate"
               />
               <div className="flex justify-between text-right">
                 <span className="font-bold font-display text-5xl">3.</span>
@@ -143,7 +146,7 @@ export function UpcrateBattleSection() {
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.8 }}
             >
-              <Image src="/instagram.png" width={88} height={88} />
+              <Image src="/instagram.png" width={88} height={88} alt="Instagram" />
             </motion.a>
           </div>
           <RadialGradient className="bg-green" variant="center" />

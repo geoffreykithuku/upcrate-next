@@ -128,17 +128,14 @@ export function HeroSliderSection() {
             animate={{ scale: [0, 1.35, 1] }}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            {" "}
-            {t("pages.home.slider_content.1.text")}
+            <>{" "}{t("pages.home.slider_content.1.text")}</>
           </motion.h3>
           <motion.h3
             className="text-center text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-display"
             animate={{ scale: [0, 1.2, 1] }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            {" "}
-            {t("pages.home.slider_content.2.text")}
-            <br />
+            <>{" "}{t("pages.home.slider_content.2.text")}<br /></>
           </motion.h3>
           <motion.span
             className="text-center text-4xl md:text-5xl lg:text-6xl xl:text-8xl font-display text-white text-shadow"

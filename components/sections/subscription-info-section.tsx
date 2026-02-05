@@ -54,6 +54,7 @@ export function SubscriptionInfoSection() {
             src="/subscriptions/deutsche-post@2x.png"
             width={98}
             height={95}
+            alt="Deutsche Post"
           />
         </div>
         <div className="col-span-3 md:col-span-1 mt-10 md:mt-12">
@@ -71,6 +72,7 @@ export function SubscriptionInfoSection() {
               src="/subscriptions/payment-methods@2x.png"
               width={282}
               height={79}
+              alt="Payment methods for subscriptions"
             />
           </div>
           <h5 className="underline mt-3 text-2xl">
@@ -81,6 +83,7 @@ export function SubscriptionInfoSection() {
               src="/subscriptions/payment-methods@2x.png"
               width={282}
               height={79}
+              alt="Payment methods for shop"
             />
           </div>
         </div>

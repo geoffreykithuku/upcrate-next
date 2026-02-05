@@ -26,6 +26,7 @@ export function JoinTheArtCrewSection({
               layout="fixed"
               width={170}
               height={170}
+              alt="Join step icon"
             />
             <h4 className="text-2xl font-bold text-purple-dark">
               {t("sections.join_the_artcrew.steps.0.title")}
@@ -40,6 +41,7 @@ export function JoinTheArtCrewSection({
               layout="fixed"
               width={170}
               height={170}
+              alt="Share step icon"
             />
             <h4 className="text-2xl font-bold text-purple-dark">
               {t("sections.join_the_artcrew.steps.1.title")}
@@ -54,6 +56,7 @@ export function JoinTheArtCrewSection({
               layout="fixed"
               width={170}
               height={170}
+              alt="Earn step icon"
             />
             <h4 className="text-2xl font-bold text-purple-dark">
               {t("sections.join_the_artcrew.steps.2.title")}

@@ -21,6 +21,7 @@ export function SubscribeNowSection() {
               src="/subscribe-now/1-month-box.png"
               width="532"
               height="280"
+              alt="One month subscription box"
             />
           </Parallax>
 
