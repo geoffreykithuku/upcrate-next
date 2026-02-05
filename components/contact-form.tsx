@@ -187,7 +187,9 @@ export function ContactForm() {
       </p>
 
       <div className="mt-10">
-        <p className="text-lg mb-5">{t("forms.intro")}</p>
+        {formStatus !== "success" && (
+          <p className="text-lg mb-5">{t("forms.intro")}</p>
+        )}
         {formStatus !== "success" && (
           <form onSubmit={(event) => submitForm(event)}>
             <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-y-10 md:gap-x-20 justify-between text-left">
