@@ -41,8 +41,10 @@ export function Button({
         whileTap={{ scale: 0.9 }}
         className={`cursor-pointer font-display p-3 pt-2 pb-3 md:text-3xl inline-block max-w-max mx-auto ${variantClassName} ${className}`}
       >
-        <Link href={href} className="col-span-2 inline-flex items-center content-center gap-4">
-          {children}
+        <Link href={href} legacyBehavior>
+          <a className="col-span-2 inline-flex items-center content-center gap-4">
+            {children}
+          </a>
         </Link>{" "}
       </motion.div>
     );

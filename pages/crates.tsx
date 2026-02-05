@@ -86,11 +86,17 @@ export default function Crates({ products, pageCount }: CratesProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const wooCommerceProducts = await fetchWooCommerceProducts({
     category: "49",
-  }).catch((error) => console.error(error));
+  }).catch((error) => {
+    console.error("WooCommerce API error:", error);
+    return null;
+  });
 
   if (!wooCommerceProducts) {
     return {
-      notFound: true,
+      props: {
+        products: [],
+      },
+      revalidate: 60,
     };
   }
 
